@@ -1,9 +1,9 @@
 <?php
 // Database connection settings
 $host 	= "db";          	
-$database = "YOUR_DATABASE";   
+$database = "sigma67";   
 $username = "root";       
-$password = "ENTER_YOUR_PASSWORD_HERE";   
+$password = "Mohamed";   
  
 try {
 	$pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8", $username, $password);

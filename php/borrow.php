@@ -2,9 +2,9 @@
 session_start();
 require('includes/auth_check.php');
 
-$page_title = " Frenchichi Resturent";
+$page_title = "Log new loan | Gear Out";
 
-// If save_loan.php redirected back here with errors, read them once.
+// If save.php redirected back here with errors, read them once.
 $errors = $_SESSION['borrow_errors'] ?? [];
 $old    = $_SESSION['borrow_old'] ?? [];
 unset($_SESSION['borrow_errors'], $_SESSION['borrow_old']);
@@ -16,7 +16,7 @@ include('includes/nav.php');
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <h2 class="pt-5">Reserve a table</h2>
+            <h2 class="pt-5">Log a new loan</h2>
 
             <?php if ($errors): ?>
             <div class="alert alert-danger" role="alert">
@@ -28,7 +28,7 @@ include('includes/nav.php');
             </div>
             <?php endif; ?>
 
-            <form action="save_loan.php" method="POST">
+            <form action="save.php" method="POST">
                 <div class="mb-3">
                     <label for="item_name" class="form-label">Item</label>
                     <input type="text" class="form-control" id="item_name" name="item_name"

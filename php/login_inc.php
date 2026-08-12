@@ -1,6 +1,6 @@
 <?php
-session_start();
-require('conn_1dt.php');
+require_once __DIR__ . '/session.php';
+require_once __DIR__ . '/conn_1dt.php';
 
 if (isset($_POST['login_btn'])) {
     $email = trim($_POST['email'] ?? '');
@@ -18,6 +18,7 @@ if (isset($_POST['login_btn'])) {
     // password_verify checks the submitted password against the hash
     // stored in the database — the plain password is never stored or compared directly.
     if ($monitor && password_verify($pwd, $monitor['password'])) {
+        session_regenerate_id(true);
         $_SESSION['id']        = $monitor['id'];
         $_SESSION['firstname'] = $monitor['firstname'];
         $_SESSION['lastname']  = $monitor['lastname'];

@@ -1,12 +1,21 @@
-/* Navigation styling — carried over from the class template */
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
 .navbar a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
     color: rgb(249, 245, 245);
     text-transform: uppercase;
 }
+
 .navbar a:hover {
     color: #00f0ff;
+}
+
+.hero-hero {
+    min-height: 180px;
 }
 
 .card-title {
@@ -16,4 +25,17 @@
 .site-footer {
     background-color: #121212;
     color: rgb(249, 245, 245);
+}
+
+.btn-primary,
+.btn-danger {
+    min-width: 160px;
+}
+
+.lead {
+    font-size: 1.1rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(220, 53, 69, 0.08);
 }

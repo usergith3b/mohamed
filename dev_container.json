@@ -1,12 +1,12 @@
 {
-    "name": "Gear Out",
+    "name": "Frenchichi",
     "dockerComposeFile": "../docker-compose.yml",
     "service": "web",
     "workspaceFolder": "/var/www/html",
     "forwardPorts": [8080, 8081, 3306],
     "portsAttributes": {
         "8080": {
-            "label": "Gear Out (web)",
+            "label": "Frenchichi (web)",
             "onAutoForward": "openPreview",
             "visibility": "public"
         },
@@ -14,5 +14,5 @@
             "label": "phpMyAdmin"
         }
     },
-    "postCreateCommand": "echo 'Gear Out is ready. Open the forwarded port 8080 to view it.'"
+    "postCreateCommand": "echo 'Frenchichi is ready. Open the forwarded port 8080 to view it.'"
 }

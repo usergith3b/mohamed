@@ -1,13 +1,14 @@
 <?php
-// Start session
-session_start();
+require_once __DIR__ . '/session.php';
 
-// Delete session
+// Clear session data
+$_SESSION = [];
+if (ini_get('session.use_cookies')) {
+	$params = session_get_cookie_params();
+	setcookie(session_name(), '', time() - 42000, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+}
 session_unset();
 session_destroy();
 
-// Redirect user back to home page
 header('Location: index.php');
-
-// Stop script from running
 exit();

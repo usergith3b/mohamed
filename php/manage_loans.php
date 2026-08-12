@@ -70,7 +70,7 @@ include('includes/nav.php');
                             <td><?= htmlspecialchars($loan['logged_by_name'] ?? '—') ?></td>
                             <td>
                                 <?php if (!$loan['returned_date']): ?>
-                                <a href="return_loan.php?id=<?= (int) $loan['id'] ?>">
+                                <a href="return.php?id=<?= (int) $loan['id'] ?>">
                                     <button type="button" class="btn btn-primary btn-sm">Mark returned</button>
                                 </a>
                                 <?php endif; ?>
